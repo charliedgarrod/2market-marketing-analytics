@@ -49,4 +49,58 @@ select
 from ad_data
 limit 10;
 
+-- Updating column names in marketing data to make them more user friendly
+
+alter table marketing_data
+	rename column amtliquid to alcohol;
+
+alter table marketing_data
+	rename column amtvege to vegetables;
+
+alter table marketing_data
+	rename column amtnonveg to meat;
+
+alter table marketing_data
+	rename column amtpes to fish;
+
+alter table marketing_data
+	rename column amtchocolates to chocolate;
+
+alter table marketing_data
+	rename column amtcomm to commodities;
+
+alter table marketing_data
+	rename column amttotal to total_spend;
+
+alter table marketing_data
+	rename column numdeals to discounted_purchases;
+
+alter table marketing_data
+	rename column numwebbuy to web_purchases;
+
+alter table marketing_data
+	rename column numwalkinpur to walk_in_purchases;
+
+alter table marketing_data
+	rename column numvisits to monthly_website_visits;
+
+alter table marketing_data
+	rename column response to promotion_accepted;
+
+alter table marketing_data
+	rename column complain to made_complaint;
+
+alter table marketing_data
+	rename column count_success to successfully_converted;
+
+
+
+
+
+
+
+
+
+
+
 
