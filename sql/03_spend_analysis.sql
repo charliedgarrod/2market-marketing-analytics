@@ -74,8 +74,8 @@ order by 8 desc;
 
 -- The customers with a bachelors degree spent the most in total at 681,621. Again, the caveat to this is that the degree educated customers 
 -- make up the largest proportion of customers.
--- When adjusting for population size it is the customers with a PhD who spend the most at $672. This is interesting as, proportionately, the highest earners don't spend alot of their
--- disposable income, despite having the highest per capita spend.
+-- When adjusting for population size it is the customers with a PhD who spend the most at $672. This is interesting as, proportionately, the highest earners don't spend alot
+-- of their disposable income, despite having the highest per capita spend.
 -- The pattern of alcohol dominating shifts a little with education level. Amongst those educated beyond a secondary education, alcohol is still the dominant product.
 -- However, amongst those educated to a basic level, alcohol is the least popular product.
 
