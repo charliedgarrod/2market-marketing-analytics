@@ -19,3 +19,28 @@ order by 5 desc;
 -- Despite an advancement in technology, it is the bricks and mortar store visits that are the most common mode of making a purchase.
 
 -- Deal-seekers vs full price buyers (WIP)
+with deal_seekers as(
+select
+	country,
+	sum(discounted_purchases) as discounted_purchases,
+	sum(web_purchases + walk_in_purchases) as total_purchases
+from marketing_data
+group by 1
+)
+select
+	country,
+	sum(discounted_purchases) as discounted_purchases,
+	sum(total_purchases) as total_purchases,
+	round(sum(discounted_purchases) / sum(total_purchases)::decimal * 100, 2) as pct_discounted_purchases
+from deal_seekers
+group by 1
+order by 4 desc;
+
+-- As we might expect, the absolute number of discounted purchases in Spain is high (2374) given their large population, 
+-- however they're about mid pack with regards to proportion (23%). 
+-- The biggest deal seekers are India (26.90%) while Montenegro are most likely to pay full price,
+-- however the normal caveat applies.
+
+
+
+
