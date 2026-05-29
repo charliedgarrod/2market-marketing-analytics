@@ -1,5 +1,4 @@
 -- Conversion rate by country
-
 select
 	country,
 	round(sum(successfully_converted)::decimal / count(*) * 100, 2) as conversion_rate
@@ -105,7 +104,7 @@ on m.id = a.id
 group by 1
 order by 1;
 
--- Like the age demographic, marital status bares similar results. Digital ads are far more successful across marital statuses with widows 
+-- Like the age demographic, marital status bares similar results. Digital ads are far more successful across marital statuses, with widows 
 -- (57.74% vs 10.96% for traditional ads) being most respondent.
 -- Given the sample sizes, married couples (41.88% vs 12.89%) and unmarried couples (41.92% vs 17.75%) tell the most compelling story, 
 -- that digital ads truly are the most effective ad channels.
